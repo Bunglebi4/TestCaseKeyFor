@@ -10,11 +10,12 @@ REST API для управления пользователями на базе 
 - Poetry 1.8.3+
 
 ## Установка и запуск
+### 0. можно запустить ./setup.sh(у меня работает с: )
 
-### 1. Клонирование репозитория
+### 1. Клонирование репозитория 
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:Bunglebi4/TestCaseKeyFor.git
 cd user-management-api
 ```
 
