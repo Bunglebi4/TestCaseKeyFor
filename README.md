@@ -199,4 +199,13 @@ Consumer автоматически обрабатывает эти событи
 - trace_id передаётся через очередь
 
 
+# Результаты работы из [API_EXAMPLES.md](API_EXAMPLES.md)
+![img.png](imgs/img.png)
+Ивенты постятся
+![img_5.png](imgs/img_5.png)
+логика crud операций 
+![img_1.png](imgs/img_1.png)
+![img_2.png](imgs/img_2.png)
+![img_3.png](imgs/img_3.png)
+![img_4.png](imgs/img_4.png)
 ### Потрачено 3,5 часа

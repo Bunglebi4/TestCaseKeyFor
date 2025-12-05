@@ -5,7 +5,7 @@ name = "advanced-alchemy"
 version = "0.20.1"
 description = "Ready-to-go SQLAlchemy concoctions."
 optional = false
-python-versions = ">=3.8"
+python-versions = "3.12"
 groups = ["main"]
 files = [
     {file = "advanced_alchemy-0.20.1-py3-none-any.whl", hash = "sha256:20002374cf592d2a00db2a0fe62375ad4fab2ae6c127cb05d489265c2ec39796"},

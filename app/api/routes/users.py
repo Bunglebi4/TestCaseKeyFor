@@ -2,12 +2,11 @@ from typing import Annotated
 
 from litestar import Controller, delete, get, post, put
 from litestar.di import Provide
-from litestar.dto import DTOData
+from litestar.exceptions import NotFoundException
 from litestar.params import Parameter
 from litestar.status_codes import HTTP_201_CREATED, HTTP_204_NO_CONTENT, HTTP_404_NOT_FOUND
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.domain.models import User
 from app.domain.services import UserService
 from app.schemas import UserCreate, UserResponse, UserUpdate
 
@@ -95,8 +94,8 @@ class UserController(Controller):
     ) -> UserResponse:
         user = await user_service.update_user(user_id, data)
         if not user:
-            raise HTTP_404_NOT_FOUND
-        
+            raise NotFoundException(detail="User not found")
+
         return UserResponse(
             id=user.id,
             name=user.name,
@@ -117,4 +116,4 @@ class UserController(Controller):
     ) -> None:
         success = await user_service.delete_user(user_id)
         if not success:
-            raise HTTP_404_NOT_FOUND
+            raise NotFoundException(detail="User not found")
